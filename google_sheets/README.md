@@ -1,7 +1,7 @@
 # Results
-![alt text](./SpreedSheetOutputExample.png)
+![alt text](./spreadsheetOutputExample.png)
 
-This is a Hass.io add-on to upload the state of a entity given a set interval of time to upload.  You can have multiple entities and upload to multiple different spreedsheets.  For Each entity it will create a separate sheet to avoid having timing conflicts.
+This is a Hass.io add-on to upload the state of a entity given a set interval of time to upload.  You can have multiple entities and upload to multiple different spreadsheets.  For Each entity it will create a separate sheet to avoid having timing conflicts.
 
 # Geating started
 
@@ -22,7 +22,7 @@ then rename the file to googleDriveCredentials.json
 
 First you have to create a spread sheet that you want your information to be added to and then share it with the service you just created.
 
-Inside of your googleDriveCredentials.json there should a email.  It is this email that you want to share your spreedsheet with.
+Inside of your googleDriveCredentials.json there should a email.  It is this email that you want to share your spreadsheet with.
 
 ## 3 You want to go the hass.io and configer app
 ![alt text](./ConfigExample.png)
@@ -33,7 +33,7 @@ time - Is the Amount of time before its going to refresh google spreesheets
 
 Example 0.5 = 30 minites
 
-upload - is a array entitys that you want to uplaod and what spreedsheet you want to upload them to 
+upload - is a array entitys that you want to uplaod and what spreadsheet you want to upload them to 
 
 sheetName - is the name of your shared spreesheet
 
