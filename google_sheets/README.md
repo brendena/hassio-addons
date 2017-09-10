@@ -9,7 +9,7 @@ This is a Hass.io add-on to upload the state of a entity given a set interval of
 ## 1 Get google drive Credentials
 Follow the first parts of this [tutorial](https://www.twilio.com/blog/2017/02/an-easy-way-to-read-and-write-to-a-google-spreadsheet-in-python.html)
 
-It will show you how to go to google API Console and create a google service.  At the end will will get a client_secret.json file.
+It will show you how to go to google API Console and create a google service.  At the end you will get a client_secret.json file.
 
 You want to put that file inside your
 
@@ -26,6 +26,7 @@ Inside of your googleDriveCredentials.json there should a email.  It is this ema
 
 ## 3 You want to go the hass.io and configer app
 ![alt text](./ConfigExample.png)
+
 Example of my Set up
 
 time - Is the Amount of time before its going to refresh google spreesheets
