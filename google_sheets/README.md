@@ -1,5 +1,5 @@
 # Results
-![alt text](./spreadsheetOutputExample.png)
+![alt text](./SpreadSheetOutputExample.png)
 
 This is a Hass.io add-on to upload the state of a entity given a set interval of time to upload.  You can have multiple entities and upload to multiple different spreadsheets.  For Each entity it will create a separate sheet to avoid having timing conflicts.
 
