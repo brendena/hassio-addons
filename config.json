@@ -1,0 +1,23 @@
+{
+  "name": "google_sheet",
+  "version": "1",
+  "slug": "google_sheet",
+  "description": "googleSheet",
+  "startup": "system",
+  "boot": "auto",
+  "options": {
+		"time": 1.0,
+		"upload":[
+			{"sheetName": "input title of sheet",
+			  "entity":"Ex - sun.sun"
+			}
+		]
+	},
+  "schema": {
+		"time": "float",
+		"upload":[
+			{"sheetName": "str", "entity": "str"}
+		]
+	  },
+  "map": ["config","share"]
+}
