@@ -68,6 +68,8 @@ class GoogleSheetUpload:
 					for i, attribute in enumerate(self.__selectAttributes):
 						cell_list[indexCell_list + i].value =  rowData[i]
 				self.__currentWorkSheet.update_cells(cell_list)
+			else:
+				print("nothing to push")
 	
 	def __createSQLStatement(self,entity,startTime,endTime):
 			sqlStatement = 'SELECT '

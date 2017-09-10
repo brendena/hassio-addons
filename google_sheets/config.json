@@ -19,5 +19,5 @@
 			{"sheetName": "str", "entity": "str"}
 		]
 	  },
-  "map": ["config","share"]
+  "map": ["config:rw","share"]
 }
