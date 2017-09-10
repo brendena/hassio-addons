@@ -87,10 +87,6 @@ def entireLoop():
 	for googleSheetName in googleSheets:
 		print(googleSheetName)
 		googleSheetUploader.changeSheetAndEntities(googleSheetName, googleSheets[googleSheetName])
-		
-		start = date.today() - timedelta(30)
-		end = date.today()
-
 		googleSheetUploader.updateGoogleSheet(start,end)
 	print("start")
 	print(start.strftime("%Y-%m-%d %H:%M:%S"))

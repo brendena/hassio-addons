@@ -78,7 +78,7 @@ class GoogleSheetUpload:
 				sqlStatement = ''.join([sqlStatement, attribute,' , '])
 			#example output
 			# 'SELECT created, state created FROM states WHERE entity_id = "media_player.kitchen_home" ORDER BY state_id DESC'
-			sqlStatement =  ''.join([sqlStatement,self.__selectAttributes[-1]," FROM states WHERE entity_id = '", entity, "' AND created BETWEEN '", startTime.strftime("%Y-%m-%d %H:%M:%S"), "' AND '",  endTime.strftime("%Y-%m-%d %H:%M:%S"),"'  ORDER BY state_id DESC"])
+			sqlStatement =  ''.join([sqlStatement,self.__selectAttributes[-1]," FROM states WHERE entity_id = '", entity, "' AND created BETWEEN '", startTime.strftime("%Y-%m-%d %H:%M:%S"), "' AND '",  endTime.strftime("%Y-%m-%d %H:%M:%S"),"'  ORDER BY state_id ASC"])
 			#print(sqlStatement)
 			return sqlStatement
 			
@@ -117,6 +117,10 @@ class GoogleSheetUpload:
 		#from the bottom most cell keep going up untill a values reached 
 		while(self.__currentWorkSheet.cell(currentPosition,1).value == ''):
 			currentPosition = currentPosition - 10
+			#currentPosition can be below index of 2
+			if(currentPosition <= 2):
+				currentPosition = 2
+				break
 			#print(currentPosition)
 		#once a value is reached move up by 1 untill no value is there
 		#this is the bottom most empty index

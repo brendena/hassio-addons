@@ -1,9 +1,10 @@
 {
   "name": "google_sheet",
-  "version": "1",
+  "version": "2",
   "slug": "google_sheet",
   "description": "googleSheet",
   "startup": "system",
+  "url":"https://github.com/brendena/hassio-addons/tree/master/google_sheets",
   "boot": "auto",
   "options": {
 		"time": 1.0,
