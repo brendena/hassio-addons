@@ -78,7 +78,7 @@ class GoogleSheetUpload:
 				sqlStatement = ''.join([sqlStatement, attribute,' , '])
 			#example output
 			# 'SELECT created, state created FROM states WHERE entity_id = "media_player.kitchen_home" ORDER BY state_id DESC'
-			sqlStatement =  ''.join([sqlStatement,self.__selectAttributes[-1]," FROM states WHERE entity_id = '", entity, "' AND created BETWEEN '", startTime.strftime("%Y-%m-%d %H:%M:%S"), "' AND '",  endTime.strftime("%Y-%m-%d %H:%M:%S"),"'  ORDER BY state_id ASC"])
+			sqlStatement =  ''.join([sqlStatement,self.__selectAttributes[-1]," FROM states WHERE state != 'unknown' AND entity_id = '", entity, "' AND created BETWEEN '", startTime.strftime("%Y-%m-%d %H:%M:%S"), "' AND '",  endTime.strftime("%Y-%m-%d %H:%M:%S"),"'  ORDER BY state_id ASC"])
 			#print(sqlStatement)
 			return sqlStatement
 			
